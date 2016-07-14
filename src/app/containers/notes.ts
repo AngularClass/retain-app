@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { NoteCreator, NoteCard } from '../ui';
 import { NotesService } from '../services';
 
@@ -35,7 +35,7 @@ import { NotesService } from '../services';
     </div>
   `
 })
-export class Notes {
+export class Notes implements OnDestroy {
   notes = []
 
   constructor(private noteService: NotesService) {
@@ -54,5 +54,9 @@ export class Notes {
       const i = this.notes.findIndex(localNote => localNote.id === note.id);
       this.notes.splice(i, 1);
     });
+  }
+
+  ngOnDestroy() {
+    console.log('destroyed');
   }
 }
