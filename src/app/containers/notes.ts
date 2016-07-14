@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core';9d
 import { NoteCard, NoteCreator } from '../ui';
 
 @Component({
