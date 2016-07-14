@@ -74,7 +74,7 @@ export class NoteCreator {
   newNote = {
     title: '',
     value: '',
-    color: ''
+    color: 'white'
   };
 
   onCreateNote() {
@@ -92,7 +92,7 @@ export class NoteCreator {
     this.newNote = {
       title: '',
       value: '',
-      color: ''
+      color: 'white'
     };
     this.fullForm = false;
   }
