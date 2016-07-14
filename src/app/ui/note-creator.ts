@@ -5,6 +5,7 @@ import {
   EventEmitter
 } from '@angular/core';
 import { FORM_DIRECTIVES } from '@angular/forms';
+import { ColorPicker } from './color-picker';
 
 @Component({
   selector: 'note-creator',
@@ -23,10 +24,11 @@ import { FORM_DIRECTIVES } from '@angular/forms';
     }
   `],
   directives: [
-    ...FORM_DIRECTIVES
+    ...FORM_DIRECTIVES,
+    ColorPicker
   ],
   template: `
-    <div class="note-creator shadow-2">
+    <div class="note-creator shadow-2" [ngStyle]="{'background-color': newNote.color}">
       <form (ngSubmit)="onCreateNote()" class="row">
         <input
           type="text"
@@ -46,6 +48,13 @@ import { FORM_DIRECTIVES } from '@angular/forms';
           class="col-xs-10"
         >
         <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
+          <div class="col-xs-3">
+            <color-picker
+              (selected)="onColorSelect($event)"
+              [colors]="colors"
+            >
+            </color-picker>
+          </div>
           <button
             type="submit"
             class="btn-light"
@@ -60,10 +69,12 @@ import { FORM_DIRECTIVES } from '@angular/forms';
 })
 export class NoteCreator {
   @Output() createNote = new EventEmitter();
+  colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#AEC6CF', '#F49AC2', 'white'];
   fullForm: boolean = false;
   newNote = {
     title: '',
-    value: ''
+    value: '',
+    color: ''
   };
 
   onCreateNote() {
@@ -80,12 +91,17 @@ export class NoteCreator {
   reset() {
     this.newNote = {
       title: '',
-      value: ''
+      value: '',
+      color: ''
     };
     this.fullForm = false;
   }
 
   toggle(value: boolean) {
     this.fullForm = value;
+  }
+
+  onColorSelect(color: string) {
+    this.newNote.color = color;
   }
 }
