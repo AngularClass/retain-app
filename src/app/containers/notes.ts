@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NoteCreator } from '../ui';
+import { NoteCreator, NoteCard } from '../ui';
 
 @Component({
   selector: 'notes-container',
   directives: [
-    NoteCreator
+    NoteCreator,
+    NoteCard
   ],
   styles: [`
     .notes {
@@ -19,6 +20,17 @@ import { NoteCreator } from '../ui';
       <div class="col-xs-6 creator">
         <note-creator (createNote)="onCreateNote($event)"></note-creator>
       </div>
+      <div class="notes col-xs-8">
+        <div class="row between-xs">
+          <note-card
+            class="col-xs-4"
+            *ngFor="let note of notes; let i = index;"
+            [note]="note"
+            (checked)="onNoteChecked(i)"
+          >
+          </note-card>
+        </div>
+      </div>
     </div>
   `
 })
@@ -27,5 +39,9 @@ export class Notes {
 
   onCreateNote(note) {
     this.notes.push(note);
+  }
+
+  onNoteChecked(i) {
+    this.notes.splice(i);
   }
 }
