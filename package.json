@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
     "typings-install": "typings install",
     "postinstall": "npm run typings-install",
-    "api": "angularclass-server --api retain --port 3500"
+    "api": "angularclass-server --api retain --port 4000 --auth"
   },
   "author": "",
   "license": "ISC",

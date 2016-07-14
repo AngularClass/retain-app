@@ -10,8 +10,7 @@ export class ApiService {
     'Content-Type': 'application/json',
     Accept: 'application/json'
   });
-
-  api_url: string = 'http://localhost:3500';
+  api_url: string = 'http://localhost:4000';
 
   constructor(private http: Http) {}
 
@@ -19,7 +18,7 @@ export class ApiService {
     return response.json();
   }
 
-  private checkForError(response: Response): Response {
+  private checkForError(response: Response): Response | Observable<any> {
     if (response.status >= 200 && response.status < 300) {
       return response;
     } else {
@@ -48,7 +47,7 @@ export class ApiService {
     .map(this.getJson)
   }
 
-  delete(path: string): Observable<any> {
+  delete(path): Observable<any> {
     return this.http.delete(
       `${this.api_url}${path}`,
       { headers: this.headers }
@@ -56,5 +55,9 @@ export class ApiService {
     .map(this.checkForError)
     .catch(err => Observable.throw(err))
     .map(this.getJson)
+  }
+
+  setHeaders(headers) {
+    Object.keys(headers).forEach(header => this.headers.set(header, headers[header]));
   }
 }
