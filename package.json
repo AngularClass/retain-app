@@ -7,7 +7,8 @@
     "test": "webpack --config webpack.spec.ts --progress --color && karma start",
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
     "typings-install": "typings install",
-    "postinstall": "npm run typings-install"
+    "postinstall": "npm run typings-install",
+    "api": "angularclass-server --api retain --port 3500"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +21,7 @@
     "@angular/platform-browser": "^2.0.0-rc.4",
     "@angular/platform-browser-dynamic": "^2.0.0-rc.4",
     "@angular/router": "^3.0.0-beta.2",
-    "@angularclass/api": "^1.1.8",
+    "@angularclass/api": "^1.1.9",
     "core-js": "^2.4.0",
     "lodash": "^4.13.1",
     "rxjs": "^5.0.0-beta.10",
