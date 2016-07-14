@@ -29,7 +29,7 @@ import { Component } from '@angular/core';
       <nav class="col-xs-2">
         <div class="row middle-xs between-xs">
           <span class="link">Settings</span>
-          <span class="link" >signout</span>
+          <span class="link">signout</span>
         </div>
       </nav>
     </header>
