@@ -1,0 +1,44 @@
+{
+  "name": "retain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack --config webpack.spec.ts --progress --color && karma start",
+    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
+    "typings-install": "typings install",
+    "postinstall": "npm run typings-install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^2.0.0-rc.4",
+    "@angular/compiler": "^2.0.0-rc.4",
+    "@angular/core": "^2.0.0-rc.4",
+    "@angular/forms": "^0.2.0",
+    "@angular/http": "^2.0.0-rc.4",
+    "@angular/platform-browser": "^2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.4",
+    "@angular/router": "^3.0.0-beta.2",
+    "core-js": "^2.4.0",
+    "lodash": "^4.13.1",
+    "rxjs": "^5.0.0-beta.10",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "1.0",
+    "css-loader": "^0.23.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-mocha-reporter": "^2.0.4",
+    "raw-loader": "^0.5.1",
+    "to-string-loader": "^1.1.4",
+    "ts-helpers": "^1.1.1",
+    "typescript": "^1.8.10",
+    "typescript-register": "^1.1.0",
+    "webpack": "^2.1.0-beta.15",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

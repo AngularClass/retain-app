@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+* {
+  box-sizing: border-box;
+}
+
+body, html, main, .main, .app, app {
+  min-height: 100%;
+  height: 100%;
+  background-color: #efefef;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-light {
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  min-width: 60px;
+  color: rgba(0,0,0, 0.6);
+  text-transform: uppercase;
+  line-spacing: 1px;
+  padding: 5px;
+  text-align: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-light:hover {
+  background-color: rgba(0,0,0, 0.2);
+}
+
+.btn-light:disabled, .btn-light[disabled], .btn-light.disabled {
+  cursor: not-allowed;
+  background-color: rgba(0,0,0,.12);
+  color: rgba(0,0,0,.26);
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 15px;
+}
+
+.shadow-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.shadow-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.shadow-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.shadow-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.shadow-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
