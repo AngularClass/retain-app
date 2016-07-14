@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { AppBar } from '../ui/app-bar';
+import { Notes } from './notes';
 
 @Component({
   selector: 'main-container',
   directives: [
-    AppBar
+    AppBar,
+    Notes
   ],
   template: `
     <div class="main-container">
       <app-bar></app-bar>
       <main class="main">
-        Main content here
+        <notes-container></notes-container>
       </main>
     </div>
   `
