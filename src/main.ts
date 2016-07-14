@@ -1,8 +1,11 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { disableDeprecatedForms, FORM_PROVIDERS } from '@angular/forms';
-import { App } from './app';
+import { HTTP_PROVIDERS } from '@angular/http';
+import { App, providers } from './app';
 
 bootstrap(App, [
   ...FORM_PROVIDERS,
-  disableDeprecatedForms()
+  ...HTTP_PROVIDERS,
+  disableDeprecatedForms(),
+  ...providers
 ]);
