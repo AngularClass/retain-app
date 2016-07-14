@@ -77,7 +77,6 @@ export class NoteCreator {
     if (title && value) {
       this.createNote.next({ title, value, color });
     }
-
     this.reset();
     this.fullForm = false;
   }
