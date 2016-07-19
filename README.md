@@ -9,3 +9,5 @@
 - run `npm install`
 - run `npm start` to fire up dev server
 - open browser to [`http://localhost:3000`](http://localhost:3000)
+> AngularClass Angular 2 Fundamentals course curriculum
+> rebuild Google Keep
