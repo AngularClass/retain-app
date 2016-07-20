@@ -1,7 +1,7 @@
-import * as path from 'path';
-const webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack');
 
-const config: WebpackConfig = {
+var config = {
   cache: false,
   devtool: 'source-map',
   entry: {
@@ -30,7 +30,7 @@ const config: WebpackConfig = {
   ],
 
   resolve: {
-    extensions: ['.ts', '.js', '.json'],
+    extensions: ['', '.ts', '.js', '.json'],
   },
 
   devServer: {
@@ -52,50 +52,3 @@ const config: WebpackConfig = {
 };
 module.exports = config;
 
-
-// Types
-type Entry = Array<string> | Object;
-
-type Output = Array<string> | {
-  path: string,
-  filename: string
-};
-
-type EnvOptions = any;
-
-interface WebpackConfig {
-  cache?: boolean;
-  target?: string;
-  devtool?: string;
-  entry: Entry;
-  output: any;
-  module?: {
-    loaders?: Array<any>
-  };
-  plugins?: Array<any>;
-  resolve?: {
-    extensions?: Array<string>;
-  };
-  devServer?: {
-    contentBase?: string;
-    port?: number;
-    historyApiFallback?: boolean;
-    hot?: boolean;
-    inline?: boolean;
-    watchOptions?: {
-      aggregateTimeout?: number;
-      poll?: number;
-    }
-  };
-  node?: {
-    process?: boolean;
-    global?: boolean;
-    Buffer?: boolean;
-    crypto?: string | boolean;
-    module?: boolean;
-    clearImmediate?: boolean;
-    setImmediate?: boolean
-    clearTimeout?: boolean;
-    setTimeout?: boolean
-  };
-}
