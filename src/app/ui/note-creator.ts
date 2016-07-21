@@ -1,10 +1,4 @@
-import {
-  Component,
-  Input,
-  Output,
-  EventEmitter
-} from '@angular/core';
-import { FORM_DIRECTIVES } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'note-creator',
@@ -27,16 +21,14 @@ import { FORM_DIRECTIVES } from '@angular/forms';
       <form class="row">
         <input
           type="text"
-          [ngModel]="newNote.title"
-          (ngModelChange)="newNote.title = $event"
+          [(ngModel)]="newNote.title"
           name="newNoteTitle"
           placeholder="Title"
           class="col-xs-10 title"
         >
         <input
           type="text"
-          [ngModel]="newNote.value"
-          (ngModelChange)="newNote.value = $event"
+          [(ngModel)]="newNote.value"
           name="newNoteValue"
           placeholder="Take a note..."
           class="col-xs-10"
@@ -51,15 +43,11 @@ import { FORM_DIRECTIVES } from '@angular/forms';
         </div>
       </form>
     </div>
-    <pre><code>{{ newNote | json }}</code></pre>
   `
 })
 export class NoteCreator {
-  @Output() createNote = new EventEmitter();
-
   newNote = {
     title: '',
     value: ''
   };
-
 }
