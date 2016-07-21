@@ -60,6 +60,8 @@ import {
 })
 export class NoteCard {
   @Input() note = {};
+  @Output() checked = new EventEmitter();
+
   showCheck: boolean = false;
 
   toggleCheck() {
@@ -67,6 +69,6 @@ export class NoteCard {
   }
 
   onChecked() {
-    console.log('note clicked');
+    this.checked.next(this.note);
   }
 }
