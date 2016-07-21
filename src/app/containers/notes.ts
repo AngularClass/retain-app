@@ -41,6 +41,6 @@ export class Notes {
   ]
 
   onNoteChecked(i) {
-    this.notes.splice(i);
+    this.notes.splice(i, 1);
   }
 }
