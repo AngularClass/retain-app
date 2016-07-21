@@ -22,70 +22,44 @@ import { FORM_DIRECTIVES } from '@angular/forms';
       height: 100px;
     }
   `],
-  directives: [
-    ...FORM_DIRECTIVES
-  ],
   template: `
     <div class="note-creator shadow-2">
-      <form (ngSubmit)="onCreateNote()" class="row">
+      <form class="row">
         <input
           type="text"
-          (focus)="toggle(true)"
-          [(ngModel)]="newNote.title"
+          [ngModel]="newNote.title"
+          (ngModelChange)="newNote.title = $event"
           name="newNoteTitle"
           placeholder="Title"
           class="col-xs-10 title"
-          *ngIf="fullForm"
         >
         <input
           type="text"
-          (focus)="toggle(true)"
-          [(ngModel)]="newNote.value"
-          name="newNote"
+          [ngModel]="newNote.value"
+          (ngModelChange)="newNote.value = $event"
+          name="newNoteValue"
           placeholder="Take a note..."
           class="col-xs-10"
         >
-        <div class="actions col-xs-12 row between-xs" *ngIf="fullForm">
+        <div class="actions col-xs-12 row between-xs">
           <button
             type="submit"
             class="btn-light"
-            *ngIf="fullForm"
            >
             Done
           </button>
         </div>
       </form>
     </div>
+    <pre><code>{{ newNote | json }}</code></pre>
   `
 })
 export class NoteCreator {
   @Output() createNote = new EventEmitter();
-  fullForm: boolean = false;
+
   newNote = {
     title: '',
     value: ''
   };
 
-  onCreateNote() {
-    const { title, value } = this.newNote;
-    if (!title && !value) {
-      this.reset();
-      return;
-    }
-
-    this.createNote.next({ title, value });
-    this.reset();
-  }
-
-  reset() {
-    this.newNote = {
-      title: '',
-      value: ''
-    };
-    this.fullForm = false;
-  }
-
-  toggle(value: boolean) {
-    this.fullForm = value;
-  }
 }
