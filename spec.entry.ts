@@ -24,4 +24,3 @@ testing.setBaseTestProviders(
   browser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS
 );
 
-Object.assign(global, testing);
