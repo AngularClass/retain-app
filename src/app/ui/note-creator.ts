@@ -1,14 +1,13 @@
 import {
   Component,
-  Input,
   Output,
   EventEmitter
 } from '@angular/core';
-import { FORM_DIRECTIVES } from '@angular/forms';
 import { ColorPicker } from './color-picker';
 
 @Component({
   selector: 'note-creator',
+  directives: [ColorPicker],
   styles: [`
     .note-creator {
       padding: 20px;
@@ -23,13 +22,9 @@ import { ColorPicker } from './color-picker';
       height: 100px;
     }
   `],
-  directives: [
-    ...FORM_DIRECTIVES,
-    ColorPicker
-  ],
   template: `
     <div class="note-creator shadow-2" [ngStyle]="{'background-color': newNote.color}">
-      <form (ngSubmit)="onCreateNote()" class="row">
+      <form class="row" (ngSubmit)="onCreateNote()">
         <input
           type="text"
           (focus)="toggle(true)"
@@ -43,7 +38,7 @@ import { ColorPicker } from './color-picker';
           type="text"
           (focus)="toggle(true)"
           [(ngModel)]="newNote.value"
-          name="newNote"
+          name="newNoteValue"
           placeholder="Take a note..."
           class="col-xs-10"
         >
@@ -58,7 +53,6 @@ import { ColorPicker } from './color-picker';
           <button
             type="submit"
             class="btn-light"
-            *ngIf="fullForm"
            >
             Done
           </button>
@@ -70,22 +64,22 @@ import { ColorPicker } from './color-picker';
 export class NoteCreator {
   @Output() createNote = new EventEmitter();
   colors: Array<string> = ['#B19CD9', '#FF6961', '#77DD77', '#AEC6CF', '#F49AC2', 'white'];
-  fullForm: boolean = false;
   newNote = {
     title: '',
     value: '',
     color: 'white'
   };
+  fullForm: boolean = false;
 
   onCreateNote() {
     const { title, value, color } = this.newNote;
-    if (!title && !value) {
-      this.reset();
-      return;
+
+    if (title && value) {
+      this.createNote.next({ title, value, color });
     }
 
-    this.createNote.next({ title, value, color });
     this.reset();
+    this.fullForm = false;
   }
 
   reset() {
@@ -94,7 +88,6 @@ export class NoteCreator {
       value: '',
       color: 'white'
     };
-    this.fullForm = false;
   }
 
   toggle(value: boolean) {

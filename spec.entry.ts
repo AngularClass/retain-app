@@ -1,6 +1,3 @@
-
-// Error.stackTraceLimit = Infinity;
-
 import 'core-js';
 import 'ts-helpers';
 
@@ -19,12 +16,11 @@ import 'rxjs/add/observable/throw';
 import * as testing from '@angular/core/testing';
 import * as browser from '@angular/platform-browser-dynamic/testing';
 
+import './src/app/services/api.spec';
+
 testing.setBaseTestProviders(
   browser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
   browser.TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS
 );
 
 Object.assign(global, testing);
-
-const testContext = require['context']('./src', true, /\.spec\.ts/);
-testContext.keys().forEach(testContext)
