@@ -17,6 +17,7 @@ import * as testing from '@angular/core/testing';
 import * as browser from '@angular/platform-browser-dynamic/testing';
 
 import './src/app/services/api.spec';
+import './src/app/ui/note-card.spec';
 
 testing.setBaseTestProviders(
   browser.TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,

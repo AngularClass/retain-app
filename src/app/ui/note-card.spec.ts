@@ -64,6 +64,6 @@ describe('NoteCard', () => {
 
       check = noteCard.querySelector('.icon');
       expect(check).toBeNull();
-    });
-  )));
+    })
+  )))
 });
