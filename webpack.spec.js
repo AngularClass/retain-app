@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
+var webpack = require('webpack');
+var path = require('path');
 
-const config = {
-  cache: false,
+var config = {
+  cache: true,
   devtool: 'inline-source-map',
   entry: './spec.entry.ts',
 
@@ -21,24 +21,14 @@ const config = {
   },
 
   resolve: {
-    extensions: ['.ts', '.js', '.json'],
+    extensions: ['', '.ts', '.js', '.json'],
   },
-
-  devServer: {
-    historyApiFallback: true,
-    watchOptions: { aggregateTimeout: 300, poll: 1000 }
-  },
-
-  node: {
-    global: true,
-    process: true,
-    Buffer: false,
-    crypto: 'empty',
-    module: false,
-    clearImmediate: false,
-    setImmediate: false,
-    clearTimeout: true,
-    setTimeout: true
-  }
+  plugins: [
+    new webpack.ContextReplacementPlugin(
+      /\.spec\.ts/,
+      true,
+      /\.spec\.ts/
+    )
+  ]
 };
 module.exports = config;

@@ -1,6 +1,3 @@
-
-// Error.stackTraceLimit = Infinity;
-
 import 'core-js';
 import 'ts-helpers';
 
@@ -25,6 +22,3 @@ testing.setBaseTestProviders(
 );
 
 Object.assign(global, testing);
-
-const testContext = require['context']('./src', true, /\.spec\.ts/);
-testContext.keys().forEach(testContext)
