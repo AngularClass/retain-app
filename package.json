@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
     "typings-install": "typings install",
     "postinstall": "npm run typings-install",
-    "api": "angularclass-server --api retain --port 4000 --auth"
+    "api": "angularclass-server --api retain --port 3500 --auth"
   },
   "author": "",
   "license": "ISC",
@@ -39,8 +39,7 @@
     "to-string-loader": "^1.1.4",
     "ts-helpers": "^1.1.1",
     "typescript": "^1.8.10",
-    "typescript-register": "^1.1.0",
-    "webpack": "^2.1.0-beta.15",
+    "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
 }
