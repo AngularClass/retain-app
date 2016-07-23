@@ -3,7 +3,7 @@ import { ApiService } from './api';
 import 'rxjs/Rx';
 
 @Injectable()
-export class NotesService {
+export class NoteService {
   path: string = '/notes';
   constructor(private apiService: ApiService) {}
 

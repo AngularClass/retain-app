@@ -1,2 +1,2 @@
 export { ApiService } from './api';
-export { NotesService } from './notes';
+export { NoteService } from './notes';
