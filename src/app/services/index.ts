@@ -1,3 +1,3 @@
 export { ApiService } from './api';
-export { NotesService } from './notes';
+export { NoteService } from './notes';
 export { StoreHelper } from './store-helper';
