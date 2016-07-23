@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { NoteCard, NoteCreator } from '../ui';
+import { NoteService } from '../services';
 import { Store } from '../store';
-import { NotesService } from '../services';
 import 'rxjs/Rx';
 
 @Component({
   selector: 'notes-container',
   directives: [
-    NoteCreator,
-    NoteCard
+    NoteCard,
+    NoteCreator
   ],
   styles: [`
     .notes {
@@ -41,12 +41,13 @@ export class Notes {
   notes = []
   constructor(
     private store: Store,
-    private noteService: NotesService
+    private noteService: NoteService
   ) {
-
     this.noteService.getNotes()
     .subscribe();
-    this.store.changes.pluck('notes').subscribe((notes: any) =>  this.notes = notes);
+
+    this.store.changes.pluck('notes')
+    .subscribe((notes: any) =>  this.notes = notes);
   }
 
   onCreateNote(note) {
