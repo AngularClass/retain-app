@@ -1,11 +1,7 @@
 import {
-  describe,
-  it,
-  beforeEach,
-  beforeEachProviders,
   inject,
-  expect,
-  async
+  async,
+  addProviders
 } from '@angular/core/testing';
 import { BaseRequestOptions, Http, Response, ResponseOptions } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
@@ -15,7 +11,7 @@ describe('ApiSerivce', () => {
   let apiSerivce: ApiService;
   let mockbackend: MockBackend;
 
-  beforeEachProviders(() => [
+  beforeEach(() => addProviders([
     BaseRequestOptions,
     MockBackend,
     {
@@ -24,7 +20,7 @@ describe('ApiSerivce', () => {
       deps: [MockBackend, BaseRequestOptions]
     },
     ApiService
-  ]);
+  ]));
 
   beforeEach(inject([ApiService, MockBackend], (service, mock) => {
     apiSerivce = service;
