@@ -6,8 +6,6 @@
   "scripts": {
     "test": "webpack --config webpack.spec.ts --progress --color && karma start",
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 3000  --content-base src",
-    "typings-install": "typings install",
-    "postinstall": "npm run typings-install",
     "api": "angularclass-server --api retain --port 3500"
   },
   "author": "",
@@ -39,7 +37,6 @@
     "to-string-loader": "^1.1.4",
     "ts-helpers": "^1.1.1",
     "typescript": "^1.8.10",
-    "typescript-register": "^1.1.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
