@@ -1,7 +1,7 @@
-const path = require('path');
-const webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack');
 
-const config = {
+var config = {
   cache: true,
   devtool: 'source-map',
   entry: {
@@ -30,7 +30,7 @@ const config = {
   ],
 
   resolve: {
-    extensions: ['', '.ts', '.js', '.json'],
+    extensions: ['', '.ts', '.js', '.json']
   },
 
   devServer: {
