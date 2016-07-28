@@ -24,6 +24,7 @@ This repo is designed to accompany the free [Angular 2 Fundamentals course](http
 # Getting Started
 
 - Clone or fork this repository
+- run `npm install -g typescript webpack webpack-dev-server tslint`
 - run `npm install`
 - run `npm start` to fire up dev server
 - open browser to [`http://localhost:3000`](http://localhost:3000)
