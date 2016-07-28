@@ -30,7 +30,7 @@ var config = {
   ],
 
   resolve: {
-    extensions: ['', '.ts', '.js', '.json'],
+    extensions: ['', '.ts', '.js', '.json']
   },
 
   devServer: {
@@ -51,4 +51,3 @@ var config = {
   }
 };
 module.exports = config;
-
