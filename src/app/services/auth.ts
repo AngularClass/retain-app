@@ -9,7 +9,6 @@ import 'rxjs/Rx';
 @Injectable()
 export class AuthService implements CanActivate {
   JWT_KEY: string = 'retain_token';
-  JWT: string = '';
 
   constructor(
      private storeHelper: StoreHelper,
@@ -29,19 +28,15 @@ export class AuthService implements CanActivate {
   }
 
   isAuthorized(): boolean {
-    return Boolean(this.JWT);
+    return Boolean(window.localStorage.getItem(this.JWT_KEY));
   }
 
   canActivate(): boolean {
-    const canActivate = this.isAuthorized();
-    this.onCanActivate(canActivate);
-    return canActivate;
-  }
-
-  onCanActivate(canActivate: boolean) {
-    if (!canActivate) {
+    const isAuth = this.isAuthorized();
+    if (!isAuth) {
       this.router.navigate(['', 'auth']);
     }
+    return isAuth
   }
 
   authenticate(path, creds): Observable<any> {
