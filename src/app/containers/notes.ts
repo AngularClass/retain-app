@@ -21,7 +21,7 @@ import 'rxjs/Rx';
   template: `
     <div class="row center-xs notes">
       <div class="col-xs-6 creator">
-        <note-creator (createNote)="onCreateNote($event)"></note-creator>
+        <note-creator></note-creator>
       </div>
       <div class="notes col-xs-8">
         <div class="row between-xs">
