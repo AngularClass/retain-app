@@ -39,3 +39,17 @@ This repo is designed to accompany the free [Angular 2 Fundamentals course](http
 * What the video for the current lesson
 * Checkout to the appropriate branch for the lesson
 * Follow along and build the app!
+
+# Instructor
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img width="150 height="150"
+        src="https://avatars.githubusercontent.com/Hendrixer?v=3">
+        <br />
+        <a href="https://github.com/Hendrixer">Scott Moss</a>
+      </td>
+    </tr>
+  <tbody>
+</table>
