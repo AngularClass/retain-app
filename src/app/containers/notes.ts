@@ -29,10 +29,8 @@ import 'rxjs/Rx';
   animations: [
     trigger('fade', [
       state('void', style({opacity: 0})),
-      transition('void => *', [
-        animate(600, style({opacity: 1}))
-      ]),
-      transition('* => void', animate(1000))
+      transition('void => *', animate(300, style({opacity: 1}))),
+      transition('* => void', animate(250))
     ])
   ],
   template: `
@@ -43,7 +41,7 @@ import 'rxjs/Rx';
       <div class="notes col-xs-8">
         <div class="row between-xs">
           <note-card
-            @fade
+
             class="col-xs-4"
             *ngFor="let note of notes"
             [note]="note"
