@@ -1,5 +1,10 @@
-![enter image description here](https://res.cloudinary.com/angularclass/image/upload/v1468640978/courses-logo-large.png)
-# Retain
+<p align="center">
+  <a href="http://courses.angularclass.com/courses/angular-2-fundamentals" target="_blank">
+    <img alt="Angular 2 Fundamentals" src="https://res.cloudinary.com/angularclass/image/upload/v1468640978/courses-logo-large.png">
+  </a>
+</p>
+
+# Angular 2 Fundamentals: Retain App
 
 > Google Keep remake application for [Angular 2 Fundamentals course](https://angularclass.com/courses)
 
@@ -14,7 +19,7 @@ This repo is designed to accompany the free [Angular 2 Fundamentals course](http
 # Dependencies
 * `Node > 4.x`
 * `npm 3`
-* globals (`npm install -g`)
+* globals (`npm install --global`)
     * `typescript`
     * `webpack`
     * `webpack-dev-server`
@@ -24,7 +29,7 @@ This repo is designed to accompany the free [Angular 2 Fundamentals course](http
 # Getting Started
 
 - Clone or fork this repository
-- run `npm install -g typescript webpack webpack-dev-server tslint`
+- run `npm install --global typescript webpack webpack-dev-server tslint`
 - run `npm install`
 - run `npm start` to fire up dev server
 - open browser to [`http://localhost:3000`](http://localhost:3000)
