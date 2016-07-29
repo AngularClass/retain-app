@@ -1,4 +1,12 @@
-import { Component, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  trigger,
+  style,
+  animate,
+  state,
+  transition
+} from '@angular/core';
 import { NoteCard, NoteCreator } from '../ui';
 import { NoteService } from '../services';
 import { Store } from '../store';
@@ -18,6 +26,15 @@ import 'rxjs/Rx';
       margin-bottom: 40px;
     }
   `],
+  animations: [
+    trigger('fade', [
+      state('void', style({opacity: 0})),
+      transition('void => *', [
+        animate(600, style({opacity: 1}))
+      ]),
+      transition('* => void', animate(1000))
+    ])
+  ],
   template: `
     <div class="row center-xs notes">
       <div class="col-xs-6 creator">
@@ -26,6 +43,7 @@ import 'rxjs/Rx';
       <div class="notes col-xs-8">
         <div class="row between-xs">
           <note-card
+            @fade
             class="col-xs-4"
             *ngFor="let note of notes"
             [note]="note"
