@@ -17,14 +17,12 @@ export class AuthService implements CanActivate {
      private store: Store
    ) {
 
-    this.JWT = window.localStorage.getItem(this.JWT_KEY);
-    this.setJwt(this.JWT);
+    this.setJwt(window.localStorage.getItem(this.JWT_KEY));
   }
 
   setJwt(jwt: string) {
-    this.JWT = jwt;
     window.localStorage.setItem(this.JWT_KEY, jwt);
-    this.api.setHeaders({Authorization: `Bearer ${this.JWT}`});
+    this.api.setHeaders({Authorization: `Bearer ${jwt}`});
   }
 
   isAuthorized(): boolean {
@@ -48,7 +46,6 @@ export class AuthService implements CanActivate {
 
   signout() {
     window.localStorage.removeItem(this.JWT_KEY);
-    this.JWT = '';
     this.store.purge();
     this.router.navigate(['', 'auth']);
   }
