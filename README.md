@@ -17,8 +17,8 @@ This repo is designed to accompany the free [Angular 2 Fundamentals course](http
 
 
 # Dependencies
-* `Node > 4.x`
-* `npm 3`
+* `Node > 6.x`
+* `npm > 3.x`
 * globals (`npm install --global`)
     * `typescript`
     * `webpack`
