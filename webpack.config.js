@@ -1,7 +1,7 @@
 var path = require('path');
-const webpack = require('webpack');
+var webpack = require('webpack');
 
-const config = {
+var config = {
   cache: true,
   devtool: 'source-map',
   entry: {
