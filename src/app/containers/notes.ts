@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
-import { NoteCard, NoteCreator } from '../ui';
 import { NoteService } from '../services';
 
 @Component({
   selector: 'notes-container',
-  directives: [
-    NoteCard,
-    NoteCreator
-  ],
   styles: [`
     .notes {
       padding-top: 50px;
@@ -54,5 +49,6 @@ export class Notes {
       const i = this.notes.findIndex(localNote => localNote.id === note.id);
       this.notes.splice(i, 1);
     });
+
   }
 }
