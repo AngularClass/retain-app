@@ -1,14 +1,7 @@
 import { Component } from '@angular/core';
-import { AppBar } from '../ui/app-bar';
-import { ROUTER_DIRECTIVES } from '@angular/router';
-
-
+  
 @Component({
   selector: 'main-container',
-  directives: [
-    AppBar,
-    ...ROUTER_DIRECTIVES
-  ],
   template: `
     <div class="main-container">
       <app-bar></app-bar>

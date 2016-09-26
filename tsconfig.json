@@ -3,17 +3,17 @@
     "module": "commonjs",
     "target": "es5",
     "outDir": "dist",
-    "rootDir": ".",
+    "rootDir": "src",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "node",
+      "core-js"
+    ]
   },
-  "exclude": [
-    "typings/index.d.ts",
-    "node_modules"
-  ],
   "compileOnSave": false,
-  "buildOnSave": false,
-  "atom": { "rewriteTsconfig": false }
+  "buildOnSave": false
 }
