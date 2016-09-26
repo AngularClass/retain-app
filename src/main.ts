@@ -1,8 +1,29 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
-import { disableDeprecatedForms, provideForms } from '@angular/forms';
-import { App } from './app';
+import { NgModule }      from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { FormsModule } from '@angular/forms';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
+import { App } from './app'
+import { Main, Notes } from './app/containers'
+import { 
+  AppBar,
+  NoteCard,
+  NoteCreator,
+  ColorPicker
+} from './app/ui'
 
-bootstrap(App, [
-  disableDeprecatedForms(),
-  provideForms()
-]);
+@NgModule({
+  declarations: [
+    App,
+    Main,
+    AppBar,
+    NoteCard,
+    Notes,
+    NoteCreator,
+    ColorPicker
+  ],
+  imports: [BrowserModule, FormsModule],
+  bootstrap: [App]
+})
+export class AppModule {}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
