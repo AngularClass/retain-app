@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
-import { NoteCard } from '../ui';
 
 @Component({
   selector: 'notes-container',
-  directives: [
-    NoteCard
-  ],
   styles: [`
     .notes {
       padding-top: 50px;
