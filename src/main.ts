@@ -11,6 +11,10 @@ import {
   NoteCreator,
   ColorPicker
 } from './app/ui'
+import {
+  NoteService,
+  ApiService
+} from './app/services'
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import {
     Notes,
     NoteCreator,
     ColorPicker
+  ],
+  providers: [
+    NoteService,
+    ApiService
   ],
   imports: [BrowserModule, FormsModule, HttpModule],
   bootstrap: [App]
