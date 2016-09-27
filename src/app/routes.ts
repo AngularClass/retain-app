@@ -1,7 +1,8 @@
-import { RouterConfig } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core' 
 import { Main, Notes, About } from './containers';
 
-export const routes: RouterConfig = [
+export const routes: ModuleWithProviders = RouterModule.forRoot([
   {
     path: '',
     component: Main,
@@ -11,4 +12,4 @@ export const routes: RouterConfig = [
     ]
   },
   { path: '**', redirectTo: '' }
-];
+]);
