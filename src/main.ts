@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 import { App, routes, providers } from './app'
-import { Main, Notes, About } from './app/containers'
+import { Main, Notes, About, Auth } from './app/containers'
 import { 
   AppBar,
   NoteCard,
@@ -21,7 +21,8 @@ import {
     Notes,
     NoteCreator,
     ColorPicker,
-    About
+    About,
+    Auth
   ],
   providers,
   imports: [
