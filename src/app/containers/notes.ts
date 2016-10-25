@@ -21,7 +21,7 @@ import { NoteService } from '../services';
           <note-card
             class="col-xs-4"
             [note]="note"
-            *ngFor="let note of notes; let i = index"
+            *ngFor="let note of notes"
             (checked)="onNoteChecked($event)"
           >
           </note-card>
