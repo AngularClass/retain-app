@@ -49,6 +49,5 @@ export class Notes {
       const i = this.notes.findIndex(localNote => localNote.id === note.id);
       this.notes.splice(i, 1);
     });
-
   }
 }
