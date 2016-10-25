@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http'
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-import { App } from './app'
+import { App, providers } from './app'
 import { Main, Notes } from './app/containers'
 import { 
   AppBar,
@@ -26,10 +26,7 @@ import {
     NoteCreator,
     ColorPicker
   ],
-  providers: [
-    NoteService,
-    ApiService
-  ],
+  providers,
   imports: [BrowserModule, FormsModule, HttpModule],
   bootstrap: [App]
 })
