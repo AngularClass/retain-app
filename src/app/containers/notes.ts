@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { NoteService } from '../services';
 import { Store } from '../store';
 import 'rxjs/Rx';
