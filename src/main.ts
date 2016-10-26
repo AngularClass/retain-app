@@ -24,13 +24,13 @@ import {
     About,
     Auth
   ],
-  providers,
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routes
   ],
+  providers,
   bootstrap: [App]
 })
 export class AppModule {}
