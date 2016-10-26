@@ -3,11 +3,9 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
-import { ColorPicker } from './color-picker';
 
 @Component({
   selector: 'note-creator',
-  directives: [ColorPicker],
   styles: [`
     .note-creator {
       padding: 20px;
