@@ -1,8 +1,10 @@
-import { RouterConfig } from '@angular/router';
-import { Main, Notes, About, Auth } from './containers';
 import { AuthService } from './services';
+import { RouterModule } from '@angular/router';
+import { ModuleWithProviders } from '@angular/core' 
+import { Main, Notes, About, Auth } from './containers';
 
-export const routes: RouterConfig = [
+
+export const routes: ModuleWithProviders = RouterModule.forRoot([
   {
     path: '',
     component: Main,
@@ -14,4 +16,4 @@ export const routes: RouterConfig = [
   },
   { path: 'auth', component: Auth },
   { path: '**', redirectTo: '' }
-];
+]);
