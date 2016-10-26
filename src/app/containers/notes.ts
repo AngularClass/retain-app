@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { NoteService } from '../services';
 
 @Component({
@@ -20,8 +20,8 @@ import { NoteService } from '../services';
         <div class="row between-xs">
           <note-card
             class="col-xs-4"
-            *ngFor="let note of notes; let i = index;"
             [note]="note"
+            *ngFor="let note of notes"
             (checked)="onNoteChecked($event)"
           >
           </note-card>
@@ -30,7 +30,7 @@ import { NoteService } from '../services';
     </div>
   `
 })
-export class Notes implements OnDestroy {
+export class Notes {
   notes = []
 
   constructor(private noteService: NoteService) {
@@ -50,9 +50,5 @@ export class Notes implements OnDestroy {
       const i = this.notes.findIndex(localNote => localNote.id === note.id);
       this.notes.splice(i, 1);
     });
-  }
-
-  ngOnDestroy() {
-    console.log('destroyed');
   }
 }
