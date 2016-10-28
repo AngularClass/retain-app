@@ -30,8 +30,7 @@ var config = {
   ],
 
   resolve: {
-    extensions: ['', '.ts', '.js', '.json'],
-    modulesDirectories: ['node_modules']
+    extensions: ['', '.ts', '.js', '.json']
   },
 
   devServer: {
