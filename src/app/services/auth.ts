@@ -29,7 +29,7 @@ export class AuthService implements CanActivate {
   }
 
   isAuthorized(): boolean {
-    return Boolean(this.JWT);
+    return Boolean(window.localStorage.getItem(this.JWT_KEY)); 
   }
 
   canActivate(): boolean {
