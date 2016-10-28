@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
-import { FORM_DIRECTIVES } from '@angular/forms';
 import { AuthService } from '../services/auth';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'auth-container',
-  directives: [
-    ...FORM_DIRECTIVES
-  ],
   styles: [`
     .auth {
       height: 100%;
