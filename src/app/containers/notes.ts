@@ -1,15 +1,10 @@
-import { Component, OnDestroy } from '@angular/core';
-import { NoteCard, NoteCreator } from '../ui';
+import { Component } from '@angular/core';
 import { NoteService } from '../services';
 import { Store } from '../store';
 import 'rxjs/Rx';
 
 @Component({
   selector: 'notes-container',
-  directives: [
-    NoteCard,
-    NoteCreator
-  ],
   styles: [`
     .notes {
       padding-top: 50px;
