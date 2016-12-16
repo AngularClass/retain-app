@@ -10,25 +10,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@angular/common": "~2.1.0",
-    "@angular/compiler": "~2.1.0",
-    "@angular/core": "~2.1.0",
-    "@angular/forms": "~2.1.0",
-    "@angular/http": "~2.1.0",
-    "@angular/platform-browser": "~2.1.0",
-    "@angular/platform-browser-dynamic": "~2.1.0",
-    "@angular/router": "~3.1.0",
+    "@angular/common": "^2.0.0",
+    "@angular/compiler": "^2.0.0",
+    "@angular/core": "^2.0.0",
+    "@angular/forms": "^2.0.0",
+    "@angular/http": "^2.0.0",
+    "@angular/platform-browser": "^2.0.0",
+    "@angular/platform-browser-dynamic": "^2.0.0",
+    "@angular/router": "^3.0.0",
     "core-js": "^2.4.1",
     "lodash": "^4.16.1",
-    "rxjs": "~5.0.0-beta.12",
-    "zone.js": "~0.6.25"
+    "rxjs": "5.0.0-rc.4",
+    "zone.js": "^0.7.2"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.33",
     "@types/lodash": "^4.14.35",
     "@types/node": "^6.0.39",
-    "awesome-typescript-loader": "^2.2.4",
-    "css-loader": "^0.23.1",
+    "awesome-typescript-loader": "3.0.0-beta.10",
+    "css-loader": "^0.26.1",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.1",
     "karma-chrome-launcher": "^1.0.1",
@@ -37,8 +37,8 @@
     "raw-loader": "^0.5.1",
     "to-string-loader": "^1.1.4",
     "ts-helpers": "^1.1.1",
-    "typescript": "^2.0.2",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "typescript": "^2.1.4",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   }
 }
