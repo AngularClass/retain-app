@@ -9,11 +9,16 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
+    "lib": ["es2015", "dom"],
     "types": [
       "node",
       "core-js"
     ]
   },
+  "exclude": [
+    "node_modules",
+    "typings"
+  ],
   "compileOnSave": false,
   "buildOnSave": false
 }

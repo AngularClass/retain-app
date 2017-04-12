@@ -18,16 +18,17 @@
     "@angular/platform-browser": "^2.0.0",
     "@angular/platform-browser-dynamic": "^2.0.0",
     "@angular/router": "^3.0.0",
+    "@types/es6-promise": "0.0.32",
     "core-js": "^2.4.1",
     "lodash": "^4.16.1",
     "rxjs": "^5.0.0-beta.12",
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.33",
+    "@types/core-js": "^0.9.41",
     "@types/lodash": "^4.14.35",
     "@types/node": "^6.0.39",
-    "awesome-typescript-loader": "^2.2.4",
+    "awesome-typescript-loader": "=2.2.4",
     "css-loader": "^0.23.1",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.1",
@@ -37,7 +38,7 @@
     "raw-loader": "^0.5.1",
     "to-string-loader": "^1.1.4",
     "ts-helpers": "^1.1.1",
-    "typescript": "^2.0.2",
+    "typescript": "=2.0.10",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
