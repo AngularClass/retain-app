@@ -36,7 +36,7 @@ This repo is designed to accompany the free [Angular 2 Fundamentals course](http
 
 # Workflow
 * Start the course 
-* What the video for the current lesson
+* Watch the video for the current lesson
 * Checkout to the appropriate branch for the lesson
 * Follow along and build the app!
 
